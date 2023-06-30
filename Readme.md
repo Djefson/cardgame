@@ -6,8 +6,8 @@
 - Web browser (Google Chrome, Mozilla Firefox, etc.)
 
 ## Step 1: Download the Project Files
-1. Download the project files from the source or repository.
-
+1. Download the project files from this repository: https://github.com/Djefson/cardgame
+   
 ## Step 2: Set Up the Web Server
 1. Install and set up a web server with PHP support on your machine. If you already have a web server installed, skip this step.
 2. Place the project files in the appropriate directory of your web server (e.g., `htdocs` for XAMPP, `www` for WAMP).
