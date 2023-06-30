@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>High_Low_Same Card Game</title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="styles.scss" /> <!-- Custom stylesheet -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" /> <!-- Font Awesome CSS -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"> <!-- Bootstrap CSS -->
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.slim.min.js"></script> <!-- jQuery -->
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script> <!-- Popper.js -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script> <!-- Bootstrap JS -->
+</head>
+<body>
+  <div id="game">
+    <div class="topnav">
+      <a>
+        <button type="button" class="btn btn-success" data-toggle="modal" data-target="#myModal">
+          <h5>Game Rules</h5>
+        </button>
+      </a>
+    </div>
+    <h1>Cards Game</h1>
+    <div id="loading" class="hidden">
+      <i class="fas fa-spinner fa-spin"></i> Loading...
+    </div> 
+
+    <div id="cards"></div>
+    <div id="buttons">
+      <button id="higher" class="button1">HIGH</button>
+      <button id="lower" class="button2">LOW</button>
+      <button id="same" class="button3">SAME</button>
+      <button id="restart" class="hidden"><i class="fas fa-undo"></i> Restart</button> 
+    </div>
+
+    <div id="result"></div>
+  </div>
+  
+  <div class="container">
+    <!-- The Modal -->
+    <div class="modal" id="myModal">
+      <div class="modal-dialog modal-dialog-scrollable">
+        <div class="modal-content">
+          <!-- Modal Header -->
+          <div class="modal-header">
+            <h1 class="modal-title">Cards Guessing Game</h1>
+          </div>
+          <!-- Modal body -->
+          <div class="modal-body">
+            <!-- Introduction -->
+            <h2>Introduction</h2>
+            <p>Welcome to the Card Guessing Game! This game tests your ability to predict 
+              whether the next card will be higher or lower than the current card. Your goal 
+              is to guess correctly until there are no more cards left in the deck.</p>
+            <!-- Instructions -->
+            <h2>Instructions</h2>
+            <ol>
+              <li>When the game starts, a deck of cards is shuffled, and the first card is 
+                drawn.</li>
+              <li>The current card is displayed on the screen.</li>
+              <li>You have three options to make your guess:</li>
+              <ul>
+                <li>Guess Higher: Click the "Higher" button if you think the next card will
+                   have a higher value than the current card.</li>
+                <li>Guess Lower: Click the "Lower" button if you think the next card will have
+                   a lower value than the current card.</li>
+                <li>Guess Same: Click the "Same" button if you think the next card will have 
+                  the same value as the current card.</li>
+              </ul>
+              <li>After making your guess, the next card is drawn from the deck and revealed.</li>
+              <li>If your guess is correct:</li>
+              <ul>
+                <li>If there are no more cards left in the deck, you win the game!</li>
+                <li>Otherwise, you can continue making guesses for the next card.</li>
+              </ul>
+              <li>If your guess is incorrect, the game is over, and you lose.</li>
+              <li>You can restart the game at any time by clicking the "Restart" button.</li>
+            </ol>
+            <!-- Game Controls -->
+            <h2>Game Controls</h2>
+            <ul>
+              <li><strong>"HIGH" button:</strong> Click this button to guess that the next 
+                card will have a higher value.</li>
+              <li><strong>"LOW" button:</strong> Click this button to guess that the next 
+                card will have a lower value.</li>
+              <li><strong>"SAME" button:</strong> Click this button to guess that the next 
+                card will have the same value.</li>
+              <li><strong>"Restart" button:</strong> Click this button to restart the game 
+                after winning or guessing wrong.</li>
+            </ul>
+            <!-- Game Progress -->
+            <h2>Game Progress</h2>
+            <ul>
+              <li>The game is in progress until you win or guess wrong.</li>
+              <li>While the game is in progress, the game buttons are enabled.</li>
+              <li>After winning or guessing wrong, the game buttons are disabled until 
+                you restart the game.</li>
+            </ul>
+            <!-- Winning the Game -->
+            <h2>Winning the Game</h2>
+            <p>To win the game, you need to guess correctly until there are no more cards 
+              left in the deck. If you achieve this, a congratulatory message will be displayed, 
+              and the result will start blinking. Additionally, a sound effect will play to celebrate 
+              your victory.</p>
+            <!-- Guessing Wrong -->
+            <h2>Guessing Wrong</h2>
+            <p>If you guess wrong at any point during the game, a message will be displayed, indicating 
+              that the game is over. You will have the option to restart the game and try again.</p>
+            <!-- Have Fun -->
+            <h2>Have Fun!</h2>
+            <p>Enjoy playing the Card Guessing Game and challenge yourself to make accurate predictions. 
+              Good luck and have fun!</p>
+          </div>
+          <p> by Joseph /Bally's Coding_Test.  &copy; 2023</p>
+          <!-- Modal footer -->
+          <div class="modal-footer">
+            <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div> 
+  </div>
+  
+  <script src="script.js"></script>
+</body>
+</html>
