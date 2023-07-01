@@ -6,8 +6,8 @@
 - Web browser (Google Chrome, Mozilla Firefox, etc.)
 
 ## Step 1: Download the Project Files
-1. Download the project files from this repository: https://github.com/Djefson/cardgame
-2. Unzip the project folder 
+1. Download the project files from the source or repository.
+
 ## Step 2: Set Up the Web Server
 1. Install and set up a web server with PHP support on your machine. If you already have a web server installed, skip this step.
 2. Place the project files in the appropriate directory of your web server (e.g., `htdocs` for XAMPP, `www` for WAMP).
@@ -33,4 +33,4 @@ Congratulations! You have successfully set up and played the game project.
 
 **Note 1:** If you encounter any issues during the setup or execution, ensure that your web server and PHP are properly configured and running correctly. Additionally, check for any error messages displayed in the browser's developer console or the web server's log files for troubleshooting purposes.
 
-**Note 2:**  I have written PHP codes just to test if is suitable for this project in times of logical coding, therefore I've decided to use only javscript as the perfect  working server script language for this genre, because by including AJAX = Asynchronous JavaScript and XML the game logic have started to be more complex and erroneous, don't mind if you doesn't want to follow all instructions above just click the  `index.html` file the project will run pefectly, but I advise you to follow  all steps above for the reason that Xampp/Appache server have an impact in some project sections design layouts.
+**Note 1:**  I have written PHP codes just to fetch data from the API the rest of the server-side codes are written in javascript for implementing the Game logic and functionalities, and the front-end layouts stacks are HTML5, SASS, Bootstrap.
