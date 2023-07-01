@@ -34,4 +34,4 @@ Congratulations! You have successfully set up and played the game project.
 
 **Note 1:** If you encounter any issues during the setup or execution, ensure that your web server and PHP are properly configured and running correctly. Additionally, check for any error messages displayed in the browser's developer console or the web server's log files for troubleshooting purposes.
 
-**Note 1:**  I have written PHP codes just to fetch data from the API the rest of the server-side codes are written in javascript for implementing the Game logic and functionalities, and the front-end layouts stacks are HTML5, SASS, Bootstrap.
+**Note 2:**  I've written PHP codes just to fetch data from the API the rest of the server-side codes are written in javascript for implementing the Game logic and functionalities, and the front-end layouts stacks are HTML5, SASS, Bootstrap.
