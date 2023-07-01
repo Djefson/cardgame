@@ -29,27 +29,34 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // Start a new game
-    function startGame() {
-        gameInProgress = true;
-        disableButtons();
-        document.getElementById('cards').innerHTML = '';
-        resultElement.innerHTML = '';
+function startGame() {
+    gameInProgress = true;
+    disableButtons();
+    document.getElementById('cards').innerHTML = '';
+    resultElement.innerHTML = '';
 
-        fetch('https://deckofcardsapi.com/api/deck/new/shuffle/?deck_count=1')
-            .then(response => response.json())
-            .then(data => {
-                deckId = data.deck_id;
-                remainingCards = data.remaining;
+    // Fetch deck ID using AJAX
+    let xhr = new XMLHttpRequest();
+    xhr.onreadystatechange = function () {
+        if (xhr.readyState === 4 && xhr.status === 200) {
+            let deckIdData = JSON.parse(xhr.responseText);
+            deckId = deckIdData;
+            remainingCards = 52; // Assuming a new deck always has 52 cards
 
-                fetch(`https://deckofcardsapi.com/api/deck/${deckId}/draw/?count=1`)
-                    .then(response => response.json())
-                    .then(data => {
-                        currentCard = data.cards[0];
-                        displayCard(currentCard.image);
-                        enableButtons();
-                    });
-            });
-    }
+            // Fetch current card using the obtained deck ID
+            fetch(`https://deckofcardsapi.com/api/deck/${deckId}/draw/?count=1`)
+                .then(response => response.json())
+                .then(data => {
+                    currentCard = data.cards[0];
+                    displayCard(currentCard.image);
+                    enableButtons();
+                });
+        }
+    };
+    xhr.open('GET', 'index.php', true);
+    xhr.send();
+}
+
 
     // Check if the guess is correct
     function checkGuess(nextCard) {
