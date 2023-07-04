@@ -35,3 +35,9 @@ Congratulations! You have successfully set up and played the game project.
 **Note 1:** If you encounter any issues during the setup or execution, ensure that your web server and PHP are properly configured and running correctly. Additionally, check for any error messages displayed in the browser's developer console or the web server's log files for troubleshooting purposes.
 
 **Note 2:**  I've written PHP codes just to fetch data from the API the rest of the server-side codes are written in javascript for implementing the Game logic and functionalities, and the front-end layouts stacks are HTML5, SASS, Bootstrap.
+
+<img width="1440" alt="Screenshot 2023-07-04 at 11 44 58" src="https://github.com/Djefson/cardgame/assets/58703612/c977955a-c2c6-46d9-9c44-a93a9155aae6">
+
+
+
+
