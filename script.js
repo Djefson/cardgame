@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Display card image
     function displayCard(cardUrl) {
-        var cardElement = document.createElement('img');
+        let cardElement = document.createElement('img');
         cardElement.src = cardUrl;
         document.getElementById('cards').appendChild(cardElement);
     }
@@ -84,7 +84,7 @@ function startGame() {
         fetch(`https://deckofcardsapi.com/api/deck/${deckId}/draw/?count=1`)
             .then(response => response.json())
             .then(data => {
-                var nextCard = data.cards[0];
+                let nextCard = data.cards[0];
                 displayCard(nextCard.image);
 
                 if ((guessedHigher && nextCard.value > currentCard.value) || (!guessedHigher && nextCard.value < currentCard.value)) {
@@ -112,13 +112,13 @@ function startGame() {
 
     // Play sound tone
     function playSound() {
-        var audio = new Audio('sound/winsquare.mp3');
+        let audio = new Audio('sound/winsquare.mp3');
         audio.play();
     }
 
     // Show restart button
     function showRestartButton() {
-        var restartButton = document.getElementById('restart');
+        let restartButton = document.getElementById('restart');
         restartButton.classList.remove('hidden');
     }
 
@@ -126,7 +126,7 @@ function startGame() {
     function restartGame() {
         clearInterval(blinkInterval);
         resultElement.classList.remove('blink');
-        var restartButton = document.getElementById('restart');
+        let restartButton = document.getElementById('restart');
         restartButton.classList.add('hidden');
         startGame();
     }
